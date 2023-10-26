@@ -15,7 +15,9 @@ function expandAliases(targets, targetMap) {
 }
 
 function allTargets(targetMap) {
-  return [...new Set(Object.values(targetMap).flat())];
+  // momentarily patched, because have issue when I target specific layer address
+  //return [...new Set(Object.values(targetMap).flat())];
+  return [...new Set(Object.values(targetMap))];
 }
 
 function _setup( paramName, targetMap ) {
